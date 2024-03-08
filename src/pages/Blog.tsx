@@ -15,7 +15,7 @@ const Blog = () => {
 
   const deleteBlog = async () => {
     try {
-      const response = await axios.delete(`${BACKEND_URL}/api/v1/blog/${id}`, {
+      const response = await axios.delete(`https://${BACKEND_URL}/api/v1/blog/${id}`, {
         headers: {
           Authorization: localStorage.getItem("token"),
         },

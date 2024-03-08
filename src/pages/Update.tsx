@@ -16,7 +16,7 @@ const Update = () => {
   useEffect(() => {
     try {
       axios
-        .get(`${BACKEND_URL}/api/v1/blog/${id}`, {
+        .get(`https://${BACKEND_URL}/api/v1/blog/${id}`, {
           headers: {
             Authorization: localStorage.getItem("token"),
           },
@@ -35,7 +35,7 @@ const Update = () => {
   const updateBlog = async () => {
     try {
       const response = await axios.put(
-        `${BACKEND_URL}/api/v1/blog`,
+        `https://${BACKEND_URL}/api/v1/blog`,
         {
           id: Number(id),
           title,

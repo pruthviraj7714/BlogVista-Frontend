@@ -14,7 +14,7 @@ const Publish = () => {
     try {
       
         const response = await axios.post(
-          `${BACKEND_URL}/api/v1/blog`,
+          `https://${BACKEND_URL}/api/v1/blog`,
           {
             title,
             content,
