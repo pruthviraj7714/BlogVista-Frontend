@@ -26,7 +26,7 @@ const Auth = ({ type }: { type: "signup" | "signin" }) => {
       const authorId = response.data.id;
       localStorage.setItem("token", jwt);
       localStorage.setItem("authorId", authorId);
-      toast.success("Succesfully Login", {
+      toast.success(`${type === 'signin' ? "Succesfully Logged In" : "Succesfully Account Created"}`, {
         onClose: () => navigate('/blogs')
       })
 
